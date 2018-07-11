@@ -1,0 +1,13 @@
+zuul:
+  routes:
+    myProduct:
+      path: /myProduct/**
+      serviceId: product
+      sensitiveHeaders:
+  ignored-patterns:
+    - /**/product/env/print
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
